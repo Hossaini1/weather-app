@@ -4,24 +4,6 @@ import "leaflet/dist/leaflet.css";
 function Leaflet() {
   const { city, coords } = Context();
 
-  console.log(coords);
-
-//   return (
-//     <div>
-//       {coords.length > 0 && (
-//       <MapContainer center={coords} zoom={13} scrollWheelZoom={true} style={{width:'100%', height:'40vh'}}>
-//         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png">
-//           <Marker position={coords}>
-//             <Popup>
-//                 {city}
-//             </Popup>
-//           </Marker>
-//         </TileLayer>
-//       </MapContainer>
-//       )}
-//     </div>
-//   );
-// }
 
 return (
     <div className="m-10 rounded" >

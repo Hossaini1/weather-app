@@ -19,13 +19,14 @@ export const CityProvider = ({ children }) => {
       const mapResponse = await axios.get(
         `https://nominatim.openstreetmap.org/search?q=${city}&format=json`
       );
+      setWeatherData(response.data);
 
-      if (mapResponse.data.length) {
+      if (mapResponse.data.length >0) {
         const { lat, lon } = mapResponse.data[0];
         setCoords([lat, lon]);
       }
 
-      setWeatherData(response.data);
+      
     } catch (error) {
       console.error("Error bei Data Abruf", error);
     }
